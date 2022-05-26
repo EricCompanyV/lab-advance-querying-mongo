@@ -63,6 +63,8 @@ FILTER { founded_month : { $gte : 6}}
 
 PROJECT { name : 1 , founded_month : 1 }
 
+LIMIT 1000
+
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
 FILTER { founded_year : { $lt : 2000} , "acquisition.price_amount" : { $gte : 10000000}}
